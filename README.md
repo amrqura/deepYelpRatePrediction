@@ -48,6 +48,10 @@ very nice articles:
 
     http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/
     http://www.wildml.com/2015/12/implementing-a-cnn-for-text-classification-in-tensorflow/
+    
+academic paper:
+
+    https://arxiv.org/pdf/1408.5882v2.pdf
 
 stanford lecture:
 
