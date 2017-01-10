@@ -208,12 +208,14 @@ def main():
                         dev_step(x_val, y_val, writer=dev_summary_writer)
                         print("")
                         # Checkpoint directory. Tensorflow assumes this directory already exists so we need to create it
-                checkpoint_dir = os.path.abspath(os.path.join(out_dir, "checkpoints"))
-                checkpoint_dir=checkpoint_dir+"_"+str(i)
+                #checkpoint_dir = os.path.abspath(os.path.join(out_dir, "checkpoints"))
+                checkpoint_dir="checkpoints_"+str(i)+"/"
                 if not os.path.exists(checkpoint_dir):
                     os.makedirs(checkpoint_dir)
                 saver = tf.train.Saver()
-                saver.save(sess, checkpoint_dir)        
+                checkpoint_prefix = os.path.join(checkpoint_dir, "model")
+                saver.save(sess, checkpoint_prefix, global_step=current_step)
+                       
                 accuracy_list.append(dev_step(x_val, y_val, writer=dev_summary_writer))
     print ("After cross validation ")
     print ("Accuracy=",np.mean(accuracy_list))
