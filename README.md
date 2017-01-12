@@ -62,3 +62,22 @@ the code is based on the following git repositotry:
     https://github.com/dennybritz/cnn-text-classification-tf
     
 the code uses tensorflow , so please make sure to install tensorflow first before running the repository.
+
+I have created docker image , where you can pull and execute the program there:
+
+you can find the docker image here:
+
+        https://hub.docker.com/r/amrkoura/yelpchallenge/
+        
+to pull and execute the program , please execute the following commands:
+
+        docker pull amrkoura/yelpchallange
+        docker run -t -i amrkoura/yelpchallenge /bin/bash
+        cd /src/
+        python rating_prediction.py
+        
+I have also record youtube video to explain the work that I have done here, you can find it here:
+
+        https://www.youtube.com/watch?v=xb_Sm6gC0tY&t=2s
+
+
